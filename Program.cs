@@ -19,6 +19,7 @@ namespace livraria_virtual_api_gateway
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
+                .ConfigureAppConfiguration(a => a.AddJsonFile(Path.Combine("configuration", "configuration.json")))
                 .UseStartup<Startup>();
     }
 }

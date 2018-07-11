@@ -1,0 +1,53 @@
+{
+    "ReRoutes": [
+        {
+            "DownstreamPathTemplate": "/api/{version}/{everything}",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+              {
+                "Host": "catalog.api",
+                "Port": 80
+              }
+            ],
+            "UpstreamPathTemplate": "/api/{version}/catalog/{everything}",
+            "UpstreamHttpMethod": [ "POST", "PUT", "GET", "DELETE" ]
+          },
+          {
+            "DownstreamPathTemplate": "/api/{version}/{everything}",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+              {
+                "Host": "audit.api",
+                "Port": 80
+              }
+            ],
+            "UpstreamPathTemplate": "/api/{version}/audit/{everything}",
+            "UpstreamHttpMethod": [ "POST" ]
+          },
+          {
+            "DownstreamPathTemplate": "/api/{version}/{everything}",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+              {
+                "Host": "auth.api",
+                "Port": 80
+              }
+            ],
+            "UpstreamPathTemplate": "/api/{version}/auth/{everything}",
+            "UpstreamHttpMethod": [ "POST" ]
+          },
+          {
+            "DownstreamPathTemplate": "/api/{version}/{everything}",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+              {
+                "Host": "payment.api",
+                "Port": 80
+              }
+            ],
+            "UpstreamPathTemplate": "/api/{version}/payment/{everything}",
+            "UpstreamHttpMethod": [ "POST" ]
+          }
+    ],
+    "GlobalConfiguration": {}
+}
