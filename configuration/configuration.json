@@ -13,15 +13,15 @@
             "UpstreamHttpMethod": [ "POST", "PUT", "GET", "DELETE" ]
           },
           {
-            "DownstreamPathTemplate": "/{version}/public/{everything}",
-            "DownstreamScheme": "http",
+            "DownstreamPathTemplate": "/DEV/auditFunctionNode",
+            "DownstreamScheme": "https",
             "DownstreamHostAndPorts": [
               {
-                "Host": "localhost",
-                "Port": 8001
+                "Host": "https://r6hxhbakkj.execute-api.sa-east-1.amazonaws.com",
+                "Port": 80
               }
             ],
-            "UpstreamPathTemplate": "/api/{version}/audit/{everything}",
+            "UpstreamPathTemplate": "/api/{version}/audit",
             "UpstreamHttpMethod": [ "POST" ]
           },
           {
